@@ -17,51 +17,6 @@ from avro.io import DatumReader, DatumWriter
 import csv
 
 reader = csv.DictReader(open('../customers.csv'))
-#client = KafkaClient('kafka:9092')
-# value_schema_str = """
-# {
-#     "namespace": "customers.avro",
-#     "type": "record",
-#     "name": "pythonTest",
-#     "fields": [
-#         {"name" : "id", "type": "string"},
-#         {"name" : "first_name", "type": "string"},
-#         {"name" : "last_name", "type": "string"},
-#         {"name" : "email", "type": "string"},
-#         {"name" : "gender", "type": "string"},
-#         {"name" : "club_status", "type": "string"},
-#         {"name" : "comments", "type": "string"}
-#     ]
-# }
-# """
-
-# key_schema_str = """
-# {
-#     "namespace": "customers.avro",
-#     "type": "record",
-#     "name": "pythonTest",
-#     "fields": [
-#         {"name" : "id", "type": "string"},
-#         {"name" : "first_name", "type": "string"},
-#         {"name" : "last_name", "type": "string"},
-#         {"name" : "email", "type": "string"},
-#         {"name" : "gender", "type": "string"},
-#         {"name" : "club_status", "type": "string"},
-#         {"name" : "comments", "type": "string"}
-#     ]
-# }
-# """
-# value_schema = avro.loads(value_schema_str)
-# key_schema = avro.loads(key_schema_str)
-# value = {"name": "Value"}
-# key = {"name": "Key"}
-# def delivery_report(err, msg):
-#     """ Called once for each message produced to indicate delivery result.
-#         Triggered by poll() or flush(). """
-#     if err is not None:
-#         print('Message delivery failed: {}'.format(err))
-#     else:
-#         print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
 
 
 
