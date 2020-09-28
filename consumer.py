@@ -7,7 +7,7 @@ db = sql.connect(host ='localhost', user = "root", passwd = "password", db ="pyt
 
 
 consumer = KafkaConsumer(
-    'TestTopic1',
+    'topic_test',
     bootstrap_servers=['localhost:9092'],
     auto_offset_reset='earliest',
     enable_auto_commit=True,

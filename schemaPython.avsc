@@ -1,0 +1,17 @@
+
+{
+    "namespace": "transactions.avro",
+    "type": "record",
+    "name": "pythonTest",
+    "fields": [
+        {"name" : "id", "type": "int"},
+        {"name" : "BASKET_NUM", "type": "int"},
+        {"name" : "HSHD_NUM", "type": "int"},
+        {"name" : "PURCHASE_", "type": "string"},
+        {"name" : "SPEND", "type": "float"},
+        {"name" : "UNITS", "type": "int"},
+        {"name" : "STORE_R", "type": "string"},
+        {"name" : "WEEK_NUM", "type": "int"},
+        {"name" : "YEAR", "type": "int"}
+    ]
+}
