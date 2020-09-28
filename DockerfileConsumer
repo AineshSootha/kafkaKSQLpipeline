@@ -22,4 +22,4 @@ RUN python3 -m pip install mysqlclient\
 COPY ["./producer.py", "./"]
 COPY ["./consumer.py", "./"]
 
-CMD ["python3", "./producer.py"]
+CMD ["python3", "./consumer.py"]
