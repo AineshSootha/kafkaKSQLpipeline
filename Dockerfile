@@ -1,8 +1,6 @@
 FROM ubuntu:latest
 
-ADD producer.py /
-ADD consumer.py /
-ADD customers.csv /
+
 
 RUN apt-get update && apt-get -y install python3 \
     python3-pip
@@ -15,11 +13,20 @@ RUN apt-get install -y libmysqlclient-dev
 RUN python3 -m pip install mysqlclient\
     pip install kafka-python\
     pip install avro-python3\
-    pip install confluent-kafka\
+    pip install "confluent-kafka[avro]"\
     pip install requests
+    #pip install mysql-python
+
+#pip install python-schema-registry-client
 #RUN mkdir /usr/src/app
 
-COPY ["./producer.py", "./"]
-COPY ["./consumer.py", "./"]
+#ADD producer.py /
+#ADD consumer.py /
+ADD confluentProducer.py /
+#ADD customers.csv /
+#ADD schemaPython.avsc /
 
-CMD ["python3", "./producer.py"]
+COPY ["./confluentProducer.py", "./"]
+#COPY ["./consumer.py", "./"]
+
+CMD ["python3", "./confluentProducer.py"]
